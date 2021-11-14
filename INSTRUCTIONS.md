@@ -4,8 +4,8 @@ One of our main objectives at Deep Lens is to match patient cancer patients with
 available. Doing this, as you can imagine, requires us to ingest and process a large amount of patient data in order to
 make the most accurate recommendations possible.
 
-In this kata, you will be tasked with creating a scaled down version of our data ingestion pipeline. You will need to 
-consume patient records in two different formats (CSV and XML) and output them in a standardized format (JSON). 
+In this kata, you will be tasked with creating a scaled down version of our data ingestion pipeline. You will need to
+consume patient records in two different formats (CSV and XML) and output them in a standardized format (JSON).
 
 The detailed requirements are as follows. If you have any questions while you're going through the process, please feel
 free to reach out!
@@ -19,7 +19,7 @@ free to reach out!
 
 ## Ingestion Requirements
 
-- The application will ingest patient files from two locations &mdash; `data/in/xml` and `data/in/csv`. 
+- The application will ingest patient files from two locations &mdash; `data/in/xml` and `data/in/csv`.
 - Any given file should only be processed once during each run of your application. It is ok to re-process files on
 subsequent runs of the application, however.
 - The application can terminate when there are no files left to process.
@@ -70,8 +70,8 @@ your solution with you.
 
 - Each patient JSON document should keep track of the source file it was generated from
 (e.g. `"source": "xml/patient3.xml"`)
-- The application should run continually a process new files as they are landed in the target location(s). 
-- Files should _not_ be reprocessed after the application restarts. 
+- The application should run continually a process new files as they are landed in the target location(s).
+- Files should _not_ be reprocessed after the application restarts.
 - Source files can be moved, but not deleted.
 - The application should require a patient record to contain a medical record number (`mrn`). Failed documents should be
 moved to a failed document directory (e.g. `/data/error/xml/failed.xml`).
